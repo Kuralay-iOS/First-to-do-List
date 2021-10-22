@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A4D12F526021F2B00C9E31C /* MyFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4D12F426021F2B00C9E31C /* MyFunctions.swift */; };
+		7A4D12F526021F2B00C9E31C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4D12F426021F2B00C9E31C /* UIViewController.swift */; };
 		7A4F7ABB25B5BD4800E6B7F8 /* modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F7ABA25B5BD4700E6B7F8 /* modal.swift */; };
 		7A6D0AC825FE5800008EE67E /* DelegateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D0AC725FE5800008EE67E /* DelegateTableViewController.swift */; };
 		7A6D0ACA25FE5927008EE67E /* DecideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D0AC925FE5927008EE67E /* DecideTableViewController.swift */; };
@@ -32,7 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7A4D12F426021F2B00C9E31C /* MyFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFunctions.swift; sourceTree = "<group>"; };
+		7A4D12F426021F2B00C9E31C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		7A4F7ABA25B5BD4700E6B7F8 /* modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modal.swift; sourceTree = "<group>"; };
 		7A6D0AC725FE5800008EE67E /* DelegateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateTableViewController.swift; sourceTree = "<group>"; };
 		7A6D0AC925FE5927008EE67E /* DecideTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecideTableViewController.swift; sourceTree = "<group>"; };
@@ -84,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				7A7AD66325A890AE00E30AE6 /* Structures.swift */,
-				7A4D12F426021F2B00C9E31C /* MyFunctions.swift */,
 				7A4F7ABA25B5BD4700E6B7F8 /* modal.swift */,
 			);
 			path = Modal;
@@ -102,6 +101,7 @@
 				7A7AD65B25A747B900E30AE6 /* FoldersTableViewController.swift */,
 				7A7AD66125A74A7500E30AE6 /* TasksTableViewController.swift */,
 				7A8F9D7525B075A600E3BC87 /* AddNewTaskTableViewController.swift */,
+				7A4D12F426021F2B00C9E31C /* UIViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -226,7 +226,7 @@
 				7A98A8F626273B4B000DCF55 /* MyGoalsViewController.swift in Sources */,
 				7A7AD65E25A747F700E30AE6 /* FavoriteTableViewController.swift in Sources */,
 				7A7AD64925A7425900E30AE6 /* ViewController.swift in Sources */,
-				7A4D12F526021F2B00C9E31C /* MyFunctions.swift in Sources */,
+				7A4D12F526021F2B00C9E31C /* UIViewController.swift in Sources */,
 				7A7AD66025A7482300E30AE6 /* MenuTableViewController.swift in Sources */,
 				7A7AD64525A7425900E30AE6 /* AppDelegate.swift in Sources */,
 				7A4F7ABB25B5BD4800E6B7F8 /* modal.swift in Sources */,
