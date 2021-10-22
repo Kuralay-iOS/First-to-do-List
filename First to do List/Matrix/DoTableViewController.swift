@@ -35,20 +35,9 @@ class DoTableViewController: UITableViewController {
     
     
     @IBAction func saveButton(_ sender: UIButton) {
-        
-      
         saveLoad.set(textViewOutlet.text, forKey: "param1")
-        
         alertMessage(vc: self, alertTitle: "Successfully Saved", alertMessage: nil)
-        
     }
-    
-    
-    
-    
-    
-    
-    
 }
 
 

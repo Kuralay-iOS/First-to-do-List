@@ -9,83 +9,56 @@
 import UIKit
 
 class TasksTableViewController: UITableViewController {
-    
    
-    var folderIndex: Int?
-    
     let getModal = Modal()
     
+    var folderIndex: Int?
     var tasksArray = [TasksStruct]()
     var defaultTasksArray = [TasksStruct]()
-    
-    var serchBarTasks = UISearchBar()
-    
-    
+    var serchBar = UISearchBar()
     
     func filterForSearchTasks(text: String) {
-        
         tasksArray = defaultTasksArray.filter({(filterFolders) -> Bool in
-            
-            let searchResaltTasks = filterFolders.title
-            
-            return searchResaltTasks.lowercased().contains(text.lowercased())
-        })
+            let searchResalt = filterFolders.title
+            return searchResalt.lowercased().contains(text.lowercased())})
         
-        tableView.reloadData() // What means reloadData
+        tableView.reloadData()
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         let addTasks = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewTasks))
-        
         navigationItem.rightBarButtonItem = addTasks
-        
-        
-        
     }
     
-   
-    
     func checkHeaderTasks() {
-        
         if tasksArray.count == 0 {
             tableView.tableHeaderView = nil
         } else {
-            
             searchBarSetupTasks()
         }
     }
+    
     func searchBarSetupTasks() {
+        serchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 44))
+        serchBar.delegate = self
+        serchBar.tintColor = .blue
         
-        serchBarTasks = UISearchBar(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 44))
-        
-        serchBarTasks.delegate = self
-        
-        serchBarTasks.tintColor = .blue
-        
-        if  let textSearchBarTasks =  serchBarTasks.value(forKey: "searchField") as? UITextField {
-            
-            textSearchBarTasks.tintColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
-            textSearchBarTasks.placeholder = "Search"
+        if  let modify =  serchBar.value(forKey: "searchField") as? UITextField {
+            modify.tintColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
+            modify.placeholder = "Search"
         }
-        
-        tableView.tableHeaderView = serchBarTasks
-        
+        tableView.tableHeaderView = serchBar
     }
     
     
     override func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         let cellTasks = tableView.cellForRow(at: indexPath)
-        
         cellTasks?.backgroundColor = #colorLiteral(red: 0.9564451575, green: 0.780750745, blue: 0.6915499707, alpha: 1)
-        
     }
     
     override func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
         let cellTasks = tableView.cellForRow(at: indexPath)
-        
         cellTasks?.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.6734840638, blue: 0.6619468819, alpha: 1)
     }
     
@@ -104,38 +77,24 @@ class TasksTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tasks", for: indexPath)
-        
         cell.textLabel?.text = tasksArray[indexPath.row].title
-        
         return cell
     }
     
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         goToDetailTVC(indexFromArray: indexPath.row)
     }
     
-    
     func goToDetailTVC(indexFromArray: Int) {
-        let detailStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-        
-        if let detail = detailStoryBoard.instantiateViewController(withIdentifier: "detailtask") as? DataFromTasksTableViewController {
-            
+        let detailStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        if let detail = detailStoryboard.instantiateViewController(withIdentifier: "detailtask") as? DataFromTasksTableViewController {
             detail.dataFor = tasksArray[indexFromArray]
             detail.folderIndex = self.folderIndex
             detail.taskIndex = indexFromArray
             
-            
-            
-            
             navigationController?.pushViewController(detail, animated: true)
             
         }
-        
-        
-        
-        
     }
     
     /*
@@ -147,28 +106,19 @@ class TasksTableViewController: UITableViewController {
      */
     
  
-  
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            
-            
-            // Delete the row from the data source
             if let getIndex = folderIndex {
                 toDoListData[getIndex].tasks.remove(at: indexPath.row)
                 tasksArray.remove(at: indexPath.row)
-                
                 getModal.saveToDoList()
-                
                 checkHeaderTasks()
-                
-                
             }
             
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+            
         }
-        
     }
     
     
@@ -198,42 +148,27 @@ class TasksTableViewController: UITableViewController {
      */
     
     @objc func addNewTasks() {
-        
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        
-        if let openController = storyBoard.instantiateViewController(withIdentifier: "addtask") as? AddNewTaskTableViewController {
-            
-            openController.folderIndex = self.folderIndex
-            openController.openType = "add"
+        if let openVC = storyBoard.instantiateViewController(withIdentifier: "addtask") as? AddNewTaskTableViewController {
+            openVC.folderIndex = self.folderIndex
+            openVC.openType = "add"
 
-            
-            navigationController?.pushViewController(openController, animated: true)
+            navigationController?.pushViewController(openVC, animated: true)
         }
-        
-        
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        
         if let getIndex = folderIndex {
             tasksArray = toDoListData[getIndex].tasks
             defaultTasksArray = tasksArray
-            
             tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "pexels-karolina-grabowska-4210787"))
             tableView.backgroundView?.contentMode = .scaleAspectFit
         }
         
         tableView.reloadData()
-        
         checkHeaderTasks()
-        
     }
-    
-    
-    
 }
 
 
@@ -242,18 +177,16 @@ class TasksTableViewController: UITableViewController {
 extension TasksTableViewController : UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        serchBarTasks.setShowsCancelButton(true, animated: true)
+        serchBar.setShowsCancelButton(true, animated: true)
     }
     
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        serchBarTasks.setShowsCancelButton(false, animated: true)
-        
+        serchBar.setShowsCancelButton(false, animated: true)
         tasksArray = defaultTasksArray
-        
         tableView.reloadData()
         searchBar.text = nil
-        serchBarTasks.endEditing(true)
+        serchBar.endEditing(true)
         
     }
     
@@ -262,27 +195,15 @@ extension TasksTableViewController : UISearchBarDelegate {
         if searchText.isEmpty {
             tasksArray = defaultTasksArray
             tableView.reloadData()
-            
-            
             tabBarController?.navigationItem.title = "All favorite tasks"
         } else {
-            
             filterForSearchTasks(text: searchText)
             tabBarController?.navigationItem.title = "Found \(tasksArray.count)"
-            
-            
             if tasksArray.count == 0 {
                 tabBarController?.navigationItem.title = "We couldn't find what you're looking for."
             }
-            
         }
-        
-        
     }
-    
-    
-    
-    
 }
 
 

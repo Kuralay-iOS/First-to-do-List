@@ -10,28 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var buttonNextOutlet: UIButton!
-    
+    @IBOutlet weak var nextOutlet: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        
-        buttonNextOutlet.layer.cornerRadius = 10
-        
-        buttonNextOutlet.layer.masksToBounds = true
-        
-        
-        
+        nextOutlet.layer.cornerRadius = 10
+        nextOutlet.layer.masksToBounds = true
+    
     }
     
     @IBAction func buttonNext(_ sender: UIButton) {
-        
         dismiss(animated: false, completion: nil)
         
     }
-    
-
-
 }
 

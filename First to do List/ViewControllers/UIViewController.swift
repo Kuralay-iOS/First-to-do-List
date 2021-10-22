@@ -9,12 +9,9 @@
 import Foundation
 import UIKit
 
-
-extension UIViewController {
-    
-    func showAlert(title: String?, message: String?) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        present(alert, animated: true, completion: nil)
-    }
+func alertMessage(vc: UIViewController, alertTitle: String?, alertMessage: String?) {
+     let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertController.Style.alert)
+    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+    vc.present(alert, animated: true, completion: nil)
 }
+
