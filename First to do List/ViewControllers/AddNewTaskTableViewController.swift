@@ -88,7 +88,6 @@ class AddNewTaskTableViewController: UITableViewController {
                         TasksStruct(title: titleFild.text ?? "",
                                     description: descriptionView.text,
                                     scedule: dataForm.string(from: dataPickerOut.date),
-                                    // dateStructure: dataPickerOut.date,
                                     priority: priority,
                                     done: statusSwitch.isOn,
                                     favorite: favoriteSwitch.isOn))}
@@ -110,7 +109,7 @@ class AddNewTaskTableViewController: UITableViewController {
             getModal.saveToDoList()
             
             navigationController?.popViewController(animated: true)
-            //alertMessage(vc: self, alertTitle: "Successfully Saved", alertMessage: nil)
+            alertMessage(vc: self, alertTitle: "Successfully Saved", alertMessage: nil)
         }
         if titleFild.text?.count == 0 {
             self.title = "Title is empty"

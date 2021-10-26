@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		7A4D12F526021F2B00C9E31C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4D12F426021F2B00C9E31C /* UIViewController.swift */; };
 		7A4F7ABB25B5BD4800E6B7F8 /* modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F7ABA25B5BD4700E6B7F8 /* modal.swift */; };
-		7A6D0AC825FE5800008EE67E /* DelegateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D0AC725FE5800008EE67E /* DelegateTableViewController.swift */; };
-		7A6D0ACA25FE5927008EE67E /* DecideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D0AC925FE5927008EE67E /* DecideTableViewController.swift */; };
-		7A6D0ACC25FE73AB008EE67E /* DeleteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D0ACB25FE73AB008EE67E /* DeleteTableViewController.swift */; };
 		7A7A6B7425C836F9004E9FB5 /* DataFromTasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7A6B7325C836F9004E9FB5 /* DataFromTasksTableViewController.swift */; };
 		7A7AD64525A7425900E30AE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7AD64425A7425900E30AE6 /* AppDelegate.swift */; };
 		7A7AD64725A7425900E30AE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7AD64625A7425900E30AE6 /* SceneDelegate.swift */; };
@@ -27,16 +24,11 @@
 		7A7AD66425A890AE00E30AE6 /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7AD66325A890AE00E30AE6 /* Structures.swift */; };
 		7A8F9D7625B075A600E3BC87 /* AddNewTaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F9D7525B075A600E3BC87 /* AddNewTaskTableViewController.swift */; };
 		7A98A8F626273B4B000DCF55 /* MyGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98A8F526273B4B000DCF55 /* MyGoalsViewController.swift */; };
-		7AA267B925EFAF48009029A8 /* MatrixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA267B825EFAF48009029A8 /* MatrixViewController.swift */; };
-		7AC739D025FA95B20060AB27 /* DoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC739CF25FA95B20060AB27 /* DoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7A4D12F426021F2B00C9E31C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		7A4F7ABA25B5BD4700E6B7F8 /* modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modal.swift; sourceTree = "<group>"; };
-		7A6D0AC725FE5800008EE67E /* DelegateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateTableViewController.swift; sourceTree = "<group>"; };
-		7A6D0AC925FE5927008EE67E /* DecideTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecideTableViewController.swift; sourceTree = "<group>"; };
-		7A6D0ACB25FE73AB008EE67E /* DeleteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTableViewController.swift; sourceTree = "<group>"; };
 		7A7A6B7325C836F9004E9FB5 /* DataFromTasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFromTasksTableViewController.swift; sourceTree = "<group>"; };
 		7A7AD64125A7425900E30AE6 /* First to do List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "First to do List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7AD64425A7425900E30AE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,8 +46,6 @@
 		7A7AD66325A890AE00E30AE6 /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 		7A8F9D7525B075A600E3BC87 /* AddNewTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTaskTableViewController.swift; sourceTree = "<group>"; };
 		7A98A8F526273B4B000DCF55 /* MyGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalsViewController.swift; sourceTree = "<group>"; };
-		7AA267B825EFAF48009029A8 /* MatrixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixViewController.swift; sourceTree = "<group>"; };
-		7AC739CF25FA95B20060AB27 /* DoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,17 +59,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7A4D474725FE866100818627 /* Matrix */ = {
-			isa = PBXGroup;
-			children = (
-				7AC739CF25FA95B20060AB27 /* DoTableViewController.swift */,
-				7A6D0AC725FE5800008EE67E /* DelegateTableViewController.swift */,
-				7A6D0AC925FE5927008EE67E /* DecideTableViewController.swift */,
-				7A6D0ACB25FE73AB008EE67E /* DeleteTableViewController.swift */,
-			);
-			path = Matrix;
-			sourceTree = "<group>";
-		};
 		7A5A08F025E3DF340054527B /* Modal */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,7 +73,6 @@
 			children = (
 				7A7AD64825A7425900E30AE6 /* ViewController.swift */,
 				7A7A6B7325C836F9004E9FB5 /* DataFromTasksTableViewController.swift */,
-				7AA267B825EFAF48009029A8 /* MatrixViewController.swift */,
 				7A7AD65F25A7482300E30AE6 /* MenuTableViewController.swift */,
 				7A98A8F526273B4B000DCF55 /* MyGoalsViewController.swift */,
 				7A7AD65D25A747F700E30AE6 /* FavoriteTableViewController.swift */,
@@ -137,7 +115,6 @@
 				7A5A08F225E3DFD40054527B /* Project files */,
 				7A7AD65825A7453800E30AE6 /* Present.storyboard */,
 				7A7AD64A25A7425900E30AE6 /* Main.storyboard */,
-				7A4D474725FE866100818627 /* Matrix */,
 				7A5A08F125E3DF910054527B /* ViewControllers */,
 				7A5A08F025E3DF340054527B /* Modal */,
 				7A7AD64D25A7429500E30AE6 /* Assets.xcassets */,
@@ -220,9 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A8F9D7625B075A600E3BC87 /* AddNewTaskTableViewController.swift in Sources */,
-				7AC739D025FA95B20060AB27 /* DoTableViewController.swift in Sources */,
 				7A7A6B7425C836F9004E9FB5 /* DataFromTasksTableViewController.swift in Sources */,
-				7A6D0ACC25FE73AB008EE67E /* DeleteTableViewController.swift in Sources */,
 				7A98A8F626273B4B000DCF55 /* MyGoalsViewController.swift in Sources */,
 				7A7AD65E25A747F700E30AE6 /* FavoriteTableViewController.swift in Sources */,
 				7A7AD64925A7425900E30AE6 /* ViewController.swift in Sources */,
@@ -234,9 +209,6 @@
 				7A7AD66225A74A7500E30AE6 /* TasksTableViewController.swift in Sources */,
 				7A7AD64725A7425900E30AE6 /* SceneDelegate.swift in Sources */,
 				7A7AD66425A890AE00E30AE6 /* Structures.swift in Sources */,
-				7AA267B925EFAF48009029A8 /* MatrixViewController.swift in Sources */,
-				7A6D0AC825FE5800008EE67E /* DelegateTableViewController.swift in Sources */,
-				7A6D0ACA25FE5927008EE67E /* DecideTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
