@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TasksTableViewController: UITableViewController {
+final class TasksTableViewController: UITableViewController {
    
     let getModal = Modal()
     

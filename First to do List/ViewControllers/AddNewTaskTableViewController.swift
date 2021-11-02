@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddNewTaskTableViewController: UITableViewController {
+final class AddNewTaskTableViewController: UITableViewController {
     
     
     

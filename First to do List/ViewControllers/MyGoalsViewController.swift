@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyGoalsViewController: UIViewController {
+final class MyGoalsViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var saveGoals: UIButton!

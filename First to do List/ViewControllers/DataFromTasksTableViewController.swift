@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DataFromTasksTableViewController: UITableViewController {
+final class DataFromTasksTableViewController: UITableViewController {
     
     @IBOutlet weak var titleOfTasks: UILabel!
     @IBOutlet weak var descriptionOfTasks: UILabel!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoldersTableViewController: UITableViewController {
+final class FoldersTableViewController: UITableViewController {
     
     let copyModal = Modal()
     

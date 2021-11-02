@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FavoriteTableViewController: UITableViewController {
+final class FavoriteTableViewController: UITableViewController {
     
     let modalForFav = Modal()
     
