@@ -22,9 +22,6 @@ class FoldersTableViewController: UITableViewController {
         addFooterView()
         copyModal.loadToDoList()
         defoultTasksFolders = toDoListData
-        
-        performSegue(withIdentifier: "present", sender: nil)
-        
         footerLabelUpdate()
         checkHeaderFolders()
         
@@ -133,7 +130,7 @@ class FoldersTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let copyStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let copyStoryboard = UIStoryboard(name: "Tasks", bundle: nil)
 
         if let destination = copyStoryboard.instantiateViewController(identifier: "tasks") as? TasksTableViewController {
             destination.title = "Tasks"

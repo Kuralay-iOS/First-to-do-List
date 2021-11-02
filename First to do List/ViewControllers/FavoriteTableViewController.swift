@@ -117,7 +117,7 @@ class FavoriteTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let linkTo = UIStoryboard(name: "Main", bundle: nil)
+        let linkTo = UIStoryboard(name: "Tasks", bundle: nil)
         
         if let linkNext = linkTo.instantiateViewController(identifier: "detailtask") as? TasksTableViewController {
             linkNext.title = "Edit"

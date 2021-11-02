@@ -69,7 +69,7 @@ class DataFromTasksTableViewController: UITableViewController {
         if folderIndex != nil && taskIndex != nil {
             print(toDoListData[folderIndex!].tasks[taskIndex!])
             
-            let gotoTasks = UIStoryboard(name: "Main", bundle: nil)
+            let gotoTasks = UIStoryboard(name: "Tasks", bundle: nil)
             if let openTasks =  gotoTasks.instantiateViewController(withIdentifier: "addtask") as? AddNewTaskTableViewController {
                 openTasks.openType = "Edit"
                 openTasks.folderIndex = self.folderIndex

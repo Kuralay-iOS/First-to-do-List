@@ -86,7 +86,7 @@ class TasksTableViewController: UITableViewController {
     }
     
     func goToDetailTVC(indexFromArray: Int) {
-        let detailStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailStoryboard = UIStoryboard(name: "Tasks", bundle: nil)
         if let detail = detailStoryboard.instantiateViewController(withIdentifier: "detailtask") as? DataFromTasksTableViewController {
             detail.dataFor = tasksArray[indexFromArray]
             detail.folderIndex = self.folderIndex
@@ -148,7 +148,7 @@ class TasksTableViewController: UITableViewController {
      */
     
     @objc func addNewTasks() {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let storyBoard = UIStoryboard(name: "Tasks", bundle: nil)
         if let openVC = storyBoard.instantiateViewController(withIdentifier: "addtask") as? AddNewTaskTableViewController {
             openVC.folderIndex = self.folderIndex
             openVC.openType = "add"
