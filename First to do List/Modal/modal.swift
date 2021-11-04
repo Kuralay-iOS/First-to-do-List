@@ -12,12 +12,12 @@ import UIKit
 
 var toDoListData : [FoldersStruct] = []
 
-class Modal {
+
+final class Modal {
     
     let getUserDefaults = UserDefaults.standard
     
     func saveToDoList() {
-        
         getUserDefaults.set(try? PropertyListEncoder().encode(toDoListData), forKey: "data")
     }
     
@@ -29,12 +29,12 @@ class Modal {
         }
     }
     
-   
+    
+    
     func favOnly() -> [TasksStruct] {
         var task = [TasksStruct]()
-        
         loadToDoList()
-        
+
         for (ind, _) in toDoListData.enumerated() {
             
             let folder = toDoListData[ind].tasks

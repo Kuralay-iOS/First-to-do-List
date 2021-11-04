@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-struct FoldersStruct : Codable {
+struct FoldersStruct: Codable {
     var title : String
     var image : String? = "My Day"
     var tasks : [TasksStruct]
     
 }
 
-struct TasksStruct : Codable {
+struct TasksStruct: Codable {
     var title : String
     var description : String
     var scedule: String
